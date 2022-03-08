@@ -1,0 +1,23 @@
+{
+  "name": "pocintelbras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardocr18/pocintelbras.git"
+  },
+  "author": "Ricardo C. Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardocr18/pocintelbras/issues"
+  },
+  "homepage": "https://github.com/ricardocr18/pocintelbras#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
