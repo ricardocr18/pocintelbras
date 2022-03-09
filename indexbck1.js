@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 
 app.post('/poc', (req, res) => {
 
-    let numero = req.body.ns;
-    //let numero = "BCKD20000700G";
+    //let numero = req.body.ns;
+    let numero = "BCKD20000700G";
 
     let arr = [
         {
@@ -42,11 +42,11 @@ app.post('/poc', (req, res) => {
 
     let produto = arr.find(produto => produto.ns === numero)
 
-    let db = "Produto Cadastrado!!!"
-    let opcao = "API está ON"    
+    // let db = "Produto Cadastrado!!!"
+    // let opcao = "API está ON"    
     // let produto = "Teste"
 
-    let intelbras = {
+    /* let intelbras = {
         "status": "success",
         "chatbot_response": db,
         "raw_output": [
@@ -60,8 +60,8 @@ app.post('/poc', (req, res) => {
             }
         ]
     }
-
-    res.send(JSON.stringify(intelbras))
+*/
+    res.send(JSON.stringify(produto.modelo))
 })
 
 
