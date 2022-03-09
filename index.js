@@ -52,7 +52,7 @@ app.post('/poc', (req, res) => {
         "raw_output": [
             {
                 "output_variable": "produto",
-                "output_result": produto
+                "output_result": produto.modelo
             },
             {
                 "output_variable": "opcao",
