@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended: true}))
 
 const port = process.env.PORT || 3000 
 
-let numero = 3;
+let numero = 4;
 
 let arr = [
     {
@@ -29,7 +29,7 @@ let arr = [
 
 ]
 
-app.get('/poc', (req, res) => {
+app.get('/', (req, res) => {
 
     let produto = arr.find(produto => produto.ns === numero)
 
