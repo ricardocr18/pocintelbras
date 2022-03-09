@@ -27,11 +27,11 @@ app.post('/poc', (req, res) => {
             "modelo": "Modelo DVR",
         },
         {
-            "ns": "BCKD42550878T",
+            "ns": "BCKD20000700A",
             "modelo": "Modelo Câmera IP"
         },
         {
-            "ns": "VSDK78145017R",
+            "ns": "BCKD20000700B",
             "modelo": "Modelo NVD"
         },
         {
@@ -42,7 +42,7 @@ app.post('/poc', (req, res) => {
 
     let produto = arr.find(produto => produto.ns === numero)
 
-    let db = "Produto Cadastrado!!!"
+    let db = "Produto Está Cadastrado Com Sucesso!!!"
     let opcao = "API está ON"    
     // let produto = "Teste"
 
@@ -61,7 +61,7 @@ app.post('/poc', (req, res) => {
         ]
     }
 
-    res.send(JSON.stringify(intelbras))
+    res.send(JSON.stringify(inbenta))
 })
 
 
