@@ -61,7 +61,7 @@ app.post('/poc', (req, res) => {
         ]
     }
 
-    res.send(JSON.stringify(inbenta))
+    res.send(JSON.stringify(intelbras))
 })
 
 
