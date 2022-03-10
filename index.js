@@ -43,7 +43,7 @@ app.post('/poc', (req, res) => {
     let produto = arr.find(produto => produto.ns === numero)
 
     let db = "Produto Está Cadastrado Com Sucesso!!!"
-    let opcao = "API está ON"    
+    let opcao = "Equipamento válido com gerador de senha"    
     // let produto = "Teste"
 
     let intelbras = {

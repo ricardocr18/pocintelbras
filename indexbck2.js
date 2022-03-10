@@ -1,4 +1,4 @@
-//Deu Match com o POSTMAN
+//Arquivo Dando Match com o ChatBot da Inbenta 09/03
 
 const express = require('express');
 const { serialize } = require('v8');
@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
 
 app.post('/poc', (req, res) => {
 
-    //let numero = req.body.ns;
-    let numero = "BCKD20000700G";
+    let numero = req.body.ns;
+    //let numero = "BCKD20000700G";
 
     let arr = [
         {
@@ -29,11 +29,11 @@ app.post('/poc', (req, res) => {
             "modelo": "Modelo DVR",
         },
         {
-            "ns": "BCKD42550878T",
+            "ns": "BCKD20000700A",
             "modelo": "Modelo Câmera IP"
         },
         {
-            "ns": "VSDK78145017R",
+            "ns": "BCKD20000700B",
             "modelo": "Modelo NVD"
         },
         {
@@ -44,17 +44,17 @@ app.post('/poc', (req, res) => {
 
     let produto = arr.find(produto => produto.ns === numero)
 
-    // let db = "Produto Cadastrado!!!"
-    // let opcao = "API está ON"    
+    let db = "Produto Está Cadastrado Com Sucesso!!!"
+    let opcao = "API está ON"    
     // let produto = "Teste"
 
-    /* let intelbras = {
+    let intelbras = {
         "status": "success",
         "chatbot_response": db,
         "raw_output": [
             {
                 "output_variable": "produto",
-                "output_result": produto
+                "output_result": produto.modelo
             },
             {
                 "output_variable": "opcao",
@@ -62,8 +62,8 @@ app.post('/poc', (req, res) => {
             }
         ]
     }
-*/
-    res.send(JSON.stringify(produto.modelo))
+
+    res.send(JSON.stringify(intelbras))
 })
 
 
