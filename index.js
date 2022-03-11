@@ -19,8 +19,7 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    //let numero = "BCKD20000700G";
-
+    
     let arr = [
         {
             "ns": "BCKD20000700G",
@@ -45,6 +44,11 @@ app.post('/poc', (req, res) => {
     let db = "Produto está cadastrado em nossa base! 😉"
     let opcao = "Equipamento válido para recuperar senha"    
     // let produto = "Teste"
+    
+    let dataProduto = req.body.data
+    if ( dataProduto != ""){
+        senha = Math.floor(Math.random() * 65536);
+    }
 
     let intelbras = {
         "status": "success",
@@ -57,6 +61,10 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "opcao",
                 "output_result": opcao
+            },
+            {
+                "output_variable": "senha",
+                "output_result": senha
             }
         ]
     }
