@@ -42,7 +42,7 @@ app.post('/poc', (req, res) => {
     
     let produto = arr.find(produto => produto.ns === numero)
 
-    if (produto != numero){
+    if (produto.ns != numero){
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
     } else {
         db = "Produto está cadastrado em nossa base! 😉"
