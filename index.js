@@ -45,6 +45,7 @@ app.post('/poc', (req, res) => {
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
         db = "Produto está cadastrado em nossa base! 😉"
+        equipamento = produto.modelo
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
         equipamento = "Não possui"
