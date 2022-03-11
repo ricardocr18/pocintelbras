@@ -47,11 +47,13 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
+        equipamento = "Não possui"
     }
 
+    
     let opcao = "Equipamento válido para recuperar senha"
-    // let produto = "Teste"
-
+    
+    //Gerador de senha número aleatorio
     let dataProduto = req.body.data
     if (dataProduto != "") {
         senha = Math.floor(Math.random() * 65536);
@@ -63,7 +65,7 @@ app.post('/poc', (req, res) => {
         "raw_output": [
             {
                 "output_variable": "produto",
-                "output_result": produto.modelo
+                "output_result": equipamento
             },
             {
                 "output_variable": "opcao",
