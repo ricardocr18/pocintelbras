@@ -45,13 +45,12 @@ app.post('/poc', (req, res) => {
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
         db = "Produto está cadastrado em nossa base! 😉"
-        opcao = "Equipamento válido para recuperar senha"
-        modelo = produto.modelo
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
     }
 
-    
+    let opcao = "Equipamento válido para recuperar senha"
+    // let produto = "Teste"
 
     let dataProduto = req.body.data
     if (dataProduto != "") {
@@ -64,7 +63,7 @@ app.post('/poc', (req, res) => {
         "raw_output": [
             {
                 "output_variable": "produto",
-                "output_result": modelo
+                "output_result": produto.modelo
             },
             {
                 "output_variable": "opcao",
