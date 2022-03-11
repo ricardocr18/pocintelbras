@@ -32,11 +32,8 @@ app.post('/poc', (req, res) => {
         {
             "ns": "BCKD20000700B",
             "modelo": "Modelo NVD"
-        },
-        {
-            "ns": 4,
-            "modelo": "Modelo não Tem gerador de senha / produto não é gravador DVR/NVR nem câmera IP"
         }
+        
     ]
 
 
@@ -46,13 +43,15 @@ app.post('/poc', (req, res) => {
         produto = arr.find(produto => produto.ns === numero)
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
+        opcao = "Equipamento válido para recuperar senha"
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
-        equipamento = "Não possui"
+        equipamento = "Não Corresponde"
+        opcao = "Modelo não Tem gerador de senha "
     }
 
     
-    let opcao = "Equipamento válido para recuperar senha"
+    //let opcao = "Equipamento válido para recuperar senha"
     
     //Gerador de senha número aleatorio
     let dataProduto = req.body.data
