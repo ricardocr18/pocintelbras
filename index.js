@@ -40,13 +40,14 @@ app.post('/poc', (req, res) => {
     ]
 
 
-    let produto = arr.find(produto => produto.ns === numero)
+    //let produto = arr.find(produto => produto.ns === numero)
 
-    // if (arr.some(confirmaProd => confirmaProd.ns === numero)) {
-    //     db = "Produto está cadastrado em nossa base! 😉"
-    // } else {
-    //     db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
-    // }
+    if (arr.some(confirmaProd => confirmaProd.ns === numero)) {
+        produto = arr.find(produto => produto.ns === numero)
+        db = "Produto está cadastrado em nossa base! 😉"
+    } else {
+        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
+    }
 
     // if (numero != ""){
     //     produto = arr.find(produto => produto.ns === numero)
