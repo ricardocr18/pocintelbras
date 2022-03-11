@@ -55,7 +55,7 @@ app.post('/poc', (req, res) => {
     //      db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
     // }
 
-    //let db = "Produto está cadastrado em nossa base! 😉"
+    let db = "Produto está cadastrado em nossa base! 😉"
     let opcao = "Equipamento válido para recuperar senha"
     // let produto = "Teste"
 
