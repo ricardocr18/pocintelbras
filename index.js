@@ -42,11 +42,11 @@ app.post('/poc', (req, res) => {
     
    let produto = arr.find(produto => produto.ns === numero)
 
-//    if (arr.some(senha => senha.ns === numero)){
-//     db = "Produto está cadastrado em nossa base! 😉"
-// } else {
-//     db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
-// }
+   if (arr.some(confirmaProd => confirmaProd.ns === numero)){
+    db = "Produto está cadastrado em nossa base! 😉"
+} else {
+    db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
+}
 
     // if (numero != ""){
     //     produto = arr.find(produto => produto.ns === numero)
@@ -55,7 +55,7 @@ app.post('/poc', (req, res) => {
     //      db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
     // }
 
-    let db = "Produto está cadastrado em nossa base! 😉"
+    //let db = "Produto está cadastrado em nossa base! 😉"
     let opcao = "Equipamento válido para recuperar senha"    
     // let produto = "Teste"
     
