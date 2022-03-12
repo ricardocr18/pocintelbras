@@ -59,11 +59,8 @@ app.post('/poc', (req, res) => {
     //Gerador de senha número aleatorio
     dataProduto = req.body.data
     if (dataProduto !== "") {
-        senha = Math.floor(Math.random() * 65536); 
-              
-    } else {
-        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉" 
-    }
+        senha = Math.floor(Math.random() * 65536);               
+    } 
 
     let intelbras = {
         "status": "success",
