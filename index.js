@@ -45,7 +45,8 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
-        imagem = "./produtos/dvr.jpg"
+        dataProduto = ""
+        
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
         equipamento = "Não Corresponde"
@@ -77,11 +78,8 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "senha",
                 "output_result": senha
-            },
-            {
-                "output_variable": "imagem",
-                "output_result": imagem
             }
+            
         ]
     }
 
