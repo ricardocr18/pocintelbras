@@ -60,7 +60,7 @@ app.post('/poc', (req, res) => {
     
     //Gerador de senha número aleatorio
     dataProduto = req.body.data
-    if (imagem > 1) {
+    if (imagem >= 1) {
         senha = Math.floor(Math.random() * 65536); 
         db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
     } 
