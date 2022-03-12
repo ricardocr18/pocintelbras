@@ -24,6 +24,7 @@ app.post('/poc', (req, res) => {
         {
             "ns": "BCKD20000700G",
             "modelo": "Modelo DVR",
+            "img": "https://imgur.com/9yYhjcA"
         },
         {
             "ns": "BCKD20000700A",
@@ -44,6 +45,7 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
+        imagem = produto.img
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
         equipamento = "Não Corresponde"
@@ -75,6 +77,10 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "senha",
                 "output_result": senha
+            },
+            {
+                "output_variable": "imagem",
+                "output_result": imagem
             }
         ]
     }
