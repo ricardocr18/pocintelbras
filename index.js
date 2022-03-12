@@ -60,7 +60,9 @@ app.post('/poc', (req, res) => {
     dataProduto = req.body.data
     if (dataProduto !== "") {
         senha = Math.floor(Math.random() * 65536); 
-        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"       
+              
+    } else {
+        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉" 
     }
 
     let intelbras = {
