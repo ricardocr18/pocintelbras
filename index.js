@@ -45,7 +45,7 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
-        dataProduto = ""
+        
         
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
