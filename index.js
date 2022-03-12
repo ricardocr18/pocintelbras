@@ -45,7 +45,7 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
-        senha = ""       
+           
         
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
@@ -57,11 +57,11 @@ app.post('/poc', (req, res) => {
     //let opcao = "Equipamento válido para recuperar senha"
     
     //Gerador de senha número aleatorio
-    let dataProduto = req.body.data
-    if (dataProduto != "") {
-        senha = Math.floor(Math.random() * 65536);        
-    }else {
-        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"
+    dataProduto = ""
+    if (dataProduto >= 1) {
+        dataProduto = req.body.data
+        senha = Math.floor(Math.random() * 65536); 
+        imagem = "Ótimo, data correta. Vamos gerar a senha!!! 😉"       
     }
 
     let intelbras = {
