@@ -53,13 +53,16 @@ app.post('/poc', (req, res) => {
         opcao = "Modelo não Tem gerador de senha "
     }
 
+    //cont = req.body.imagem
+
     
     //let opcao = "Equipamento válido para recuperar senha"
     
     //Gerador de senha número aleatorio
     dataProduto = req.body.data
-    if (dataProduto !== "") {
-        senha = Math.floor(Math.random() * 65536);               
+    if (dataProduto > 1) {
+        senha = Math.floor(Math.random() * 65536); 
+        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
     } 
 
     let intelbras = {
