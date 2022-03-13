@@ -59,13 +59,13 @@ app.post('/poc', (req, res) => {
     //let opcao = "Equipamento válido para recuperar senha"
     
     //Gerador de senha número aleatorio
-    dataProduto = req.body.data
-    if (dataProduto !== undefined) {
-        senha = Math.floor(Math.random() * 65536);
-        console.log("ValordeData1: " + dataProduto) 
-        db = "Ótimo. A data está correta. Vamos gerar a senha!!! 😉"
-        //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
-     }
+    // dataProduto = req.body.data
+    // if (dataProduto !== undefined) {
+    //     senha = Math.floor(Math.random() * 65536);
+    //     console.log("ValordeData1: " + dataProduto) 
+    //     db = "Ótimo. A data está correta. Vamos gerar a senha!!! 😉"
+    //     //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
+    //  }
     //  else {
     //     console.log("ValordeData2: " + dataProduto) 
     //     
