@@ -60,16 +60,18 @@ app.post('/poc', (req, res) => {
     
     //Gerador de senha número aleatorio
     dataProduto = req.body.data
-    if (dataProduto === undefined) {
+    if (dataProduto !== undefined) {
         senha = Math.floor(Math.random() * 65536);
         console.log("ValordeData1: " + dataProduto) 
-        //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
-    } else {
-        console.log("ValordeData2: " + dataProduto) 
         db = `Ótimo. A data ${dataProduto} está correta. Vamos gerar a senha!!! 😉`
-    }
+        //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
+     }
+    //  else {
+    //     console.log("ValordeData2: " + dataProduto) 
+    //     
+    // }
 
-
+console.log("Numero de série: " + req.body.ns)
     
 
     let intelbras = {
