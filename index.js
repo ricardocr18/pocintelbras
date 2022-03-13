@@ -66,7 +66,7 @@ app.post('/poc', (req, res) => {
         //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
     } else {
         console.log("ValordeData2: " + dataProduto) 
-        db = "Ótimo, data correta. Vamos gerar a senha!!! 😉" 
+        db = `Ótimo. A data ${dataProduto} está correta. Vamos gerar a senha!!! 😉`
     }
 
 
