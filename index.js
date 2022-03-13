@@ -64,7 +64,7 @@ app.post('/poc', (req, res) => {
         senha = Math.floor(Math.random() * 65536); 
         db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
     } 
-    console.log(dataProduto)
+    console.log("ValordeData: " + dataProduto)
 
     let intelbras = {
         "status": "success",
