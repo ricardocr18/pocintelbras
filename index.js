@@ -63,7 +63,7 @@ app.post('/poc', (req, res) => {
     if (dataProduto !== undefined) {
         senha = Math.floor(Math.random() * 65536);
         console.log("ValordeData1: " + dataProduto) 
-        db = `Ótimo. A data ${dataProduto} está correta. Vamos gerar a senha!!! 😉`
+        db = "Ótimo. A data está correta. Vamos gerar a senha!!! 😉"
         //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
      }
     //  else {
