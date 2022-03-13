@@ -53,6 +53,8 @@ app.post('/poc', (req, res) => {
         opcao = "Modelo não Tem gerador de senha "
     }
 
+    senha = Math.floor(Math.random() * 65536);
+
     //cont = req.body.imagem
 
     
