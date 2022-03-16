@@ -45,12 +45,13 @@ app.post('/poc', (req, res) => {
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
-        imagem = 1
+        nsTeste = 1
         
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
         equipamento = "Não Corresponde"
         opcao = "Modelo não Tem gerador de senha "
+        nsTeste = 2
     }
 
     senha = Math.floor(Math.random() * 65536);
@@ -91,6 +92,10 @@ console.log("Numero de série: " + req.body.ns)
             {
                 "output_variable": "senha",
                 "output_result": senha
+            },
+            {
+                "output_variable": "nsTeste",
+                "output_result": nsTeste
             }
             
         ]
