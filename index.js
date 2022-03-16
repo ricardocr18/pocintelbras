@@ -49,7 +49,7 @@ app.post('/poc', (req, res) => {
         
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
-        equipamento = "Não Corresponde"
+        equipamento = "Bateria Solar"
         opcao = "Modelo não Tem gerador de senha "
         nsTeste = 2
     }
