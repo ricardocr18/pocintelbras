@@ -19,13 +19,13 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    let dataSistem = req.body.data;
+    //let dataSistem = req.body.data;
 
 
     console.log("Logo do número de série: " + numero);
 
    
-    if (req.body.data === null) {
+    if (req.body.data === undefined) {
         
         //produto.data == dataBios;
         dataAprovada = 2;
