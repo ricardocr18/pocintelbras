@@ -69,9 +69,7 @@ app.post('/poc', (req, res) => {
         console.log("errado")
     }
 
-    console.log("Valor da Variavel dataBios " + testeData)
-
-    
+    console.log("Valor da Variavel dataBios " + testeData)    
 
 
     senha = Math.floor(Math.random() * 65536);
