@@ -57,15 +57,17 @@ app.post('/poc', (req, res) => {
 
 
     let dataBios = req.body.data
+    let TesteData = dataBios.replace(/[/]/g, "");
+    console.log("Valor da Variavel dataBios " + testeData)
 
     //Informações sobre data
-    if (produto.data == dataBios){    
+    if (produto.data == TesteData){    
         console.log("correto")
     }else{
         console.log("errado")
     }
 
-    console.log("Valor da Variavel dataBios " + dataBios)
+    
 
 
     senha = Math.floor(Math.random() * 65536);
