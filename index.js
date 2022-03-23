@@ -34,7 +34,7 @@ app.post('/poc', (req, res) => {
             "ns": "BCKD20000700B",
             "modelo": "Modelo NVD"
         }
-        
+
     ]
 
 
@@ -46,7 +46,7 @@ app.post('/poc', (req, res) => {
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
         nsTeste = 1
-        
+
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
         equipamento = "Bateria Solar"
@@ -54,28 +54,25 @@ app.post('/poc', (req, res) => {
         nsTeste = 2
     }
 
+
+    let dataBios = req.body.data
+
+    //Informações sobre data
+    if (produto.data == dataBios){    
+        console.log("correto")
+    }else{
+        console.log("errado")
+    }
+
+
+
+
+
+
     senha = Math.floor(Math.random() * 65536);
 
-    //cont = req.body.imagem
+    console.log("Numero de série: " + req.body.ns)
 
-    
-    //let opcao = "Equipamento válido para recuperar senha"
-    
-    //Gerador de senha número aleatorio
-    // dataProduto = req.body.data
-    // if (dataProduto !== undefined) {
-    //     senha = Math.floor(Math.random() * 65536);
-    //     console.log("ValordeData1: " + dataProduto) 
-    //     db = "Ótimo. A data está correta. Vamos gerar a senha!!! 😉"
-    //     //db = "Ótimo, data correta. Vamos gerar a senha!!! 😉"              
-    //  }
-    //  else {
-    //     console.log("ValordeData2: " + dataProduto) 
-    //     
-    // }
-
-console.log("Numero de série: " + req.body.ns)
-    
 
     let intelbras = {
         "status": "success",
@@ -97,7 +94,7 @@ console.log("Numero de série: " + req.body.ns)
                 "output_variable": "nsTeste",
                 "output_result": nsTeste
             }
-            
+
         ]
     }
 
