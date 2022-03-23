@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    let dataSistem = req.body.data;
-    let dataBios = dataSistem.replace(/[/]/g, "");
+    // let dataSistem = req.body.data;
+    // let dataBios = dataSistem.replace(/[/]/g, "");
 
     let arr = [
         {
@@ -57,11 +57,11 @@ app.post('/poc', (req, res) => {
     }
 
     //Informar se a data está correta
-    if (produto.data == dataBios) {        
-        dataAprovada = "sim"
-    } else {
-        dataAprovada = "não"
-    }
+    // if (produto.data == dataBios) {        
+    //     dataAprovada = "sim"
+    // } else {
+    //     dataAprovada = "não"
+    // }
 
     senha = Math.floor(Math.random() * 65536);
 
