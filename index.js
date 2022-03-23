@@ -56,7 +56,7 @@ app.post('/poc', (req, res) => {
 
     let dataBios = req.body.data     
  
-    if (dataBios === undefined){
+    if ( typeof dataBios === 'undefined'){
         console.log("Vazio")
     }else{
         console.log("Populado")
