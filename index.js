@@ -60,11 +60,11 @@ app.post('/poc', (req, res) => {
     }
 
     //Informar se a data está correta
-    if (produto.data == dataBios) {        
-        dataAprovada = "sim"
-    } else {
-        dataAprovada = "não"
-    }
+    // if (produto.data == dataBios) {        
+    //     dataAprovada = "sim"
+    // } else {
+    //     dataAprovada = "não"
+    // }
 
     senha = Math.floor(Math.random() * 65536);
 
