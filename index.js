@@ -23,6 +23,8 @@ app.post('/poc', (req, res) => {
 
     if (dataSistem === "undefined"){
         let dataBios = dataSistem.replace(/[/]/g, "");
+        produto.data == dataBios;       
+        dataAprovada = 1
     }
 
     let arr = [
@@ -53,7 +55,7 @@ app.post('/poc', (req, res) => {
         nsTeste = 1
 
     } else {
-        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
+        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP.😔 E sim ao equipamento abaixo:"
         equipamento = "Bateria Solar"
         opcao = "Modelo não Tem gerador de senha "
         nsTeste = 2
@@ -92,11 +94,11 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "nsTeste",
                 "output_result": nsTeste
+            },
+            {
+                "output_variable": "dataAprovada",
+                "output_result": dataAprovada
             }
-            // {
-            //     "output_variable": "dataAprovada",
-            //     "output_result": dataAprovada
-            // }
 
         ]
     }
