@@ -63,7 +63,7 @@ app.post('/poc', (req, res) => {
     // }
 
     //Informações sobre data
-    if (produto.data == dataBios){           
+    if (produto.data === dataBios){           
         console.log("correto")
     }else{
         console.log("errado")
