@@ -25,7 +25,8 @@ app.post('/poc', (req, res) => {
         let dataBios = dataSistem.replace(/[/]/g, "");
         produto.data == dataBios;       
         dataAprovada = 1
-    // }else{
+    }
+    //else{
     //     dataAprovada = 2
     // }
 
