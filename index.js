@@ -28,11 +28,11 @@ app.post('/poc', (req, res) => {
     if (req.body.data === null) {
         //let dataBios = dataSistem.replace(/[/]/g, "");
         //produto.data == dataBios;
-        dataAprovada = 1;
+        dataAprovada = 2;
         
     }
     else {
-        dataAprovada = 2
+        dataAprovada = 1
     }
     console.log("Saida do IF: " + dataAprovada);
     console.log("Logo da data Saida: " + req.body.data);
