@@ -21,15 +21,6 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
-    if (dataSistem === "undefined"){
-        let dataBios = dataSistem.replace(/[/]/g, "");
-        produto.data == dataBios;       
-        dataAprovada = 1
-    }
-    //else{
-    //     dataAprovada = 2
-    // }
-
     let arr = [
         {
             "ns": "BCKD20000700G",
@@ -48,7 +39,7 @@ app.post('/poc', (req, res) => {
             "data": "01042010"
         }
 
-    ]    
+    ]
 
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
@@ -64,12 +55,16 @@ app.post('/poc', (req, res) => {
         nsTeste = 2
     }
 
-    //Informar se a data está correta
-    // if (produto.data == dataBios) {        
-    //     dataAprovada = "sim"
-    // } else {
-    //     dataAprovada = "não"
-    // }
+    if (dataSistem === "undefined"){
+        let dataBios = dataSistem.replace(/[/]/g, "");
+        produto.data == dataBios;       
+        dataAprovada = 1
+    }
+    else{
+        dataAprovada = 2
+    }
+
+
 
     senha = Math.floor(Math.random() * 65536);
 
