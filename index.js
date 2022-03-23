@@ -64,16 +64,12 @@ app.post('/poc', (req, res) => {
         console.log("errado")
     }
 
-
-
-
+    console.log("Valor da Variavel dataBios " + dataBios)
 
 
     senha = Math.floor(Math.random() * 65536);
 
-    console.log("Numero de série: " + req.body.ns)
-
-
+    
     let intelbras = {
         "status": "success",
         "chatbot_response": db,
