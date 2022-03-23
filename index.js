@@ -55,8 +55,12 @@ app.post('/poc', (req, res) => {
 
 
     let dataBios = req.body.data     
-    dataCerta = dataBios.find("/")   
-    console.log("Valor da Variavel dataBios " + dataCerta)
+ 
+    if (dataBios === undefined){
+        console.log("Vazio")
+    }else{
+        console.log("Populado")
+    }
 
     //Informações sobre data
     if (produto.data == dataBios){           
