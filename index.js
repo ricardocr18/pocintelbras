@@ -19,26 +19,28 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
+    let dataSistem = req.body.data;
+    let dataBios = dataSistem.replace(/[/]/g, "");
 
     let arr = [
         {
             "ns": "BCKD20000700G",
             "modelo": "Modelo DVR",
+            "data": "01102020",
             "img": "https://imgur.com/9yYhjcA"
         },
         {
             "ns": "BCKD20000700A",
-            "modelo": "Modelo Câmera IP"
+            "modelo": "Modelo Câmera IP",
+            "data": "01112021"
         },
         {
             "ns": "BCKD20000700B",
-            "modelo": "Modelo NVD"
+            "modelo": "Modelo NVD",
+            "data": "01042010"
         }
 
-    ]
-
-
-    //let produto = arr.find(produto => produto.ns === numero)
+    ]    
 
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
@@ -54,26 +56,19 @@ app.post('/poc', (req, res) => {
         nsTeste = 2
     }
 
-
-    if (arr.some(confirma => confirma.ns === numero)) {
-        produto = arr.find(produto => produto.ns === numero)
-        db = "Produto está cadastrado em nossa base! 😉"
-        equipamento = produto.modelo
-        opcao = "Equipamento válido para recuperar senha"
-        nsTeste = 1
-
+    //Informar se a data está correta
+    if (produto.data == dataBios) {
+        
+        dataAprovada = "sim"
     } else {
-        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
-        equipamento = "Bateria Solar"
-        opcao = "Modelo não Tem gerador de senha "
-        nsTeste = 2
+        dataAprovada = "não"
     }
 
     senha = Math.floor(Math.random() * 65536);
 
 
     console.log("Numero de série: " + req.body.ns)
-    console.log("valor da variavel data: "+ req.body.data)
+    console.log("valor da variavel data: " + req.body.data)
 
 
     let intelbras = {
@@ -95,6 +90,10 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "nsTeste",
                 "output_result": nsTeste
+            },
+            {
+                "output_variable": "dataAprovada",
+                "output_result": dataAprovada
             }
 
         ]
