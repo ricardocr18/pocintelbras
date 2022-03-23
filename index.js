@@ -22,10 +22,9 @@ app.post('/poc', (req, res) => {
     let dataSistem = req.body.data;
 
     //achar a data do Nº de série???
-    if (produto.data == dataSistem){
-    //(dataSistem !== "undefined"){
-        //let dataBios = dataSistem.replace(/[/]/g, "");
-        //produto.data == dataBios;       
+    if (dataSistem === "undefined"){
+        let dataBios = dataSistem.replace(/[/]/g, "");
+        produto.data == dataBios;       
         dataAprovada = 1
     }
     else{
