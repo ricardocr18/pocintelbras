@@ -24,6 +24,7 @@ app.post('/poc', (req, res) => {
         {
             "ns": "BCKD20000700G",
             "modelo": "Modelo DVR",
+            "data": "12122012",
             "img": "https://imgur.com/9yYhjcA"
         },
         {
