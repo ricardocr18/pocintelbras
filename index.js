@@ -21,9 +21,9 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
-    if (dataSistem !== ""){
-        let dataBios = dataSistem.replace(/[/]/g, "");
-    }
+    // if (dataSistem !== ""){
+    //     let dataBios = dataSistem.replace(/[/]/g, "");
+    // }
 
     let arr = [
         {
