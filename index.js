@@ -20,7 +20,7 @@ app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
     let dataSistem = req.body.data;
-    // let dataBios = dataSistem.replace(/[/]/g, "");
+    let dataBios = dataSistem.replace(/[/]/g, "");
 
     let arr = [
         {
