@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    // let dataSistem = req.body.data;
+    let dataSistem = req.body.data;
     // let dataBios = dataSistem.replace(/[/]/g, "");
 
     let arr = [
