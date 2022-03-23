@@ -33,7 +33,7 @@ app.post('/poc', (req, res) => {
     }
     else {
         dataAprovada = 1
-        let dataBios = dataSistem.replace(/[/]/g, "");
+        
     }
 
     console.log("bora ver se deu certo " + dataBios)
