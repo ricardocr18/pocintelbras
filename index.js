@@ -19,20 +19,24 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    let dataSistem = req.body.data;
+    //let dataSistem = req.body.data;
 
 
     console.log("Logo do número de série: " + numero)
 
-    console.log("Logo da data: " + dataSistem)
+    console.log("Logo da data: " + req.body.data)
     if (req.body.data === "undefined") {
         //let dataBios = dataSistem.replace(/[/]/g, "");
         //produto.data == dataBios;
         dataAprovada = 1
+        
     }
     else {
         dataAprovada = 2
     }
+    console.log("Saida do IF: " + dataAprovada)
+    console.log("Logo da data Saida: " + req.body.data)
+
 
 
     let arr = [
