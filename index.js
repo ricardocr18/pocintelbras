@@ -21,9 +21,9 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
-    // if (dataSistem !== ""){
-    //     let dataBios = dataSistem.replace(/[/]/g, "");
-    // }
+    if (dataSistem === "undefined"){
+        let dataBios = dataSistem.replace(/[/]/g, "");
+    }
 
     let arr = [
         {
@@ -69,7 +69,7 @@ app.post('/poc', (req, res) => {
     senha = Math.floor(Math.random() * 65536);
 
 
-    // console.log("Numero de série: " + req.body.ns)
+    console.log("Numero de série: " + dataSistem)
     console.log("valor da variavel data: " + req.body.data)
 
 
