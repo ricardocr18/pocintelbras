@@ -25,13 +25,13 @@ app.post('/poc', (req, res) => {
     console.log("Logo do número de série: " + numero);
 
    
-    if ( typeof dataSistem === 'null') {        
-        //produto.data == dataBios;
-        dataAprovada = 2;        
-    }
-    else {
-        dataAprovada = 1        
-    }
+    // if ( typeof dataSistem === 'null') {        
+    //     //produto.data == dataBios;
+    //     dataAprovada = 2;        
+    // }
+    // else {
+    //     dataAprovada = 1        
+    // }
 
     
     
@@ -73,9 +73,7 @@ app.post('/poc', (req, res) => {
     }
 
 
-    //achar a data do Nº de série???
-    
-    
+     
 
 
     senha = Math.floor(Math.random() * 65536);
