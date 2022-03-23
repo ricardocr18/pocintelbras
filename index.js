@@ -21,10 +21,10 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
-    if (dataSistem != ""){
+    if (dataSistem !== ""){
         let dataBios = dataSistem.replace(/[/]/g, "");
     }
-    
+
     let arr = [
         {
             "ns": "BCKD20000700G",
@@ -70,7 +70,7 @@ app.post('/poc', (req, res) => {
 
 
     // console.log("Numero de série: " + req.body.ns)
-    // console.log("valor da variavel data: " + req.body.data)
+    console.log("valor da variavel data: " + req.body.data)
 
 
     let intelbras = {
