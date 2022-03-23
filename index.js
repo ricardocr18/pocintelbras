@@ -25,7 +25,7 @@ app.post('/poc', (req, res) => {
     console.log("Logo do número de série: " + numero);
 
    
-    if (typeof dataSistem === undefined) {        
+    if (typeof dataSistem === 'undefined') {        
         //produto.data == dataBios;
         dataAprovada = 2;        
     }
