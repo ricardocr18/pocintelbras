@@ -56,13 +56,19 @@ app.post('/poc', (req, res) => {
 
     let dataBios = req.body.data     
  
-    
+   
 
     //Informações sobre data
     if (produto.data === dataBios){           
         console.log("correto")
     }else{
         console.log("errado")
+    }
+
+    if ( typeof dataBios === 'undefined'){
+        console.log("Vazio")
+    }else{
+        console.log("Populado")
     }
 
     
