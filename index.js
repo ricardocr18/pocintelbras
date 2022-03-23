@@ -21,6 +21,16 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
+    //achar a data do Nº de série???
+    if (dataSistem !== "undefined"){
+        let dataBios = dataSistem.replace(/[/]/g, "");
+        produto.data == dataBios;       
+        dataAprovada = 1
+    }
+    else{
+        dataAprovada = 2
+    }
+
     let arr = [
         {
             "ns": "BCKD20000700G",
@@ -54,16 +64,6 @@ app.post('/poc', (req, res) => {
         opcao = "Modelo não Tem gerador de senha "
         nsTeste = 2
     }
-
-    if (dataSistem === "undefined"){
-        let dataBios = dataSistem.replace(/[/]/g, "");
-        produto.data == dataBios;       
-        dataAprovada = 1
-    }
-    else{
-        dataAprovada = 2
-    }
-
 
 
     senha = Math.floor(Math.random() * 65536);
