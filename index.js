@@ -21,8 +21,19 @@ app.post('/poc', (req, res) => {
     let numero = req.body.ns;
     let dataSistem = req.body.data;
 
+
     console.log("Logo do número de série: " + numero)
+
     console.log("Logo da data: " + dataSistem)
+    if (req.body.data === "undefined") {
+        //let dataBios = dataSistem.replace(/[/]/g, "");
+        //produto.data == dataBios;
+        dataAprovada = 1
+    }
+    else {
+        dataAprovada = 2
+    }
+
 
     let arr = [
         {
@@ -61,14 +72,7 @@ app.post('/poc', (req, res) => {
 
     //achar a data do Nº de série???
     
-    if (dataSistem === "undefined") {
-        //let dataBios = dataSistem.replace(/[/]/g, "");
-        //produto.data == dataBios;
-        dataAprovada = 1
-    }
-    else {
-        dataAprovada = 2
-    }
+    
 
 
     senha = Math.floor(Math.random() * 65536);
