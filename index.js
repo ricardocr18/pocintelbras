@@ -39,8 +39,6 @@ app.post('/poc', (req, res) => {
     ]
 
 
-    //let produto = arr.find(produto => produto.ns === numero)
-
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
         db = "Produto está cadastrado em nossa base! 😉"
@@ -56,16 +54,18 @@ app.post('/poc', (req, res) => {
     }
 
 
-    let dataBios = req.body.data
-    let TesteData = dataBios.replace(/[/]/g, "");
-    console.log("Valor da Variavel dataBios " + testeData)
+    let dataBios = req.body.data     
+    dataCerta = dataBios.find("/")   
+    console.log("Valor da Variavel dataBios " + dataCerta)
 
     //Informações sobre data
-    if (produto.data == TesteData){    
+    if (produto.data == dataBios){           
         console.log("correto")
     }else{
         console.log("errado")
     }
+
+    console.log("Valor da Variavel dataBios " + testeData)
 
     
 
