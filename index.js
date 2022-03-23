@@ -56,11 +56,7 @@ app.post('/poc', (req, res) => {
 
     let dataBios = req.body.data     
  
-    // if ( typeof dataBios === 'undefined'){
-    //     console.log("Vazio")
-    // }else{
-    //     console.log("Populado")
-    // }
+    
 
     //Informações sobre data
     if (produto.data === dataBios){           
@@ -69,8 +65,7 @@ app.post('/poc', (req, res) => {
         console.log("errado")
     }
 
-    console.log("Valor da Variavel dataBios " + testeData)    
-
+    
 
     senha = Math.floor(Math.random() * 65536);
 
