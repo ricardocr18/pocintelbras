@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/poc', (req, res) => {
 
     let numero = req.body.ns;
-    let dataSistem = req.body.data;
+  
 
 
     console.log("Logo do número de série: " + numero);
