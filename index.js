@@ -71,9 +71,9 @@ app.post('/poc', (req, res) => {
         dataSistem = dataBios.replace(/[/]/g, "");
         console.log("Populado com: " + dataSistem);
         dataAprovada = 1;
-            if(produto.data === dataSistem){
-                db = `Ótimo. A data` + dataBios ` está correta. Vamos gerar a senha! 😉`
-            }
+            // if(produto.data === dataSistem){
+            //     db = `Ótimo. A data` + dataBios ` está correta. Vamos gerar a senha! 😉`
+            // }
     }
 
     
