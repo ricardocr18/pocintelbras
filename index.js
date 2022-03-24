@@ -39,7 +39,7 @@ app.post('/poc', (req, res) => {
     ]
 
     let numero = req.body.ns;
-    db = 'undefined';
+    
     //Aqui trato as pesquisas referente aos números de séries
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
@@ -55,7 +55,8 @@ app.post('/poc', (req, res) => {
     }
         
 
-    let dataBios = req.body.data     
+    let dataBios = req.body.data 
+    console.log(req.body)    
     //Aqui realizo a verificação o match das Datas com os números de séries
     if ( typeof dataBios === 'undefined'){
         console.log("Vazio")
@@ -65,6 +66,7 @@ app.post('/poc', (req, res) => {
             if(produto.data === dataSistem){
                 nsTeste = 3
                 db = `Ótimo. A data <span style="color:#00852b;"><b>${dataBios}</b></span> está correta. Vamos gerar a senha! 😉`
+
             }else{
                 db = `Infelizmente a data informada <span style="color:#00852b;"><b>${dataBios}</b></span> não corresponde com o número de série <span style="color:#00852b;"><b>${produto.ns}</b></span> do equipamento <span style="color:#00852b;"><b>${produto.modelo}</b></span>.`              
                 
