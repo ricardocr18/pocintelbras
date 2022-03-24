@@ -47,6 +47,7 @@ app.post('/poc', (req, res) => {
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
         nsTeste = 1
+        
 
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔. Segue equipamento referente ao número de série informado."
@@ -79,6 +80,7 @@ app.post('/poc', (req, res) => {
                 db = `Ótimo. A data <span style="color:#00852b;"><b>${dataBios}</b></span> está correta. Vamos gerar a senha! 😉`
             }else{
                 db = `Infelizmente a data informada <span style="color:#00852b;"><b>${dataBios}</b></span> não corresponde com o número de série <span style="color:#00852b;"><b>${produto.ns}</b></span> do equipamento <span style="color:#00852b;"><b>${produto.modelo}</b></span>.`
+                dataBios === 'undefined'
             }
     }
 
