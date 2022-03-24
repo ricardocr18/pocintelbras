@@ -72,7 +72,7 @@ app.post('/poc', (req, res) => {
         console.log("Populado com: " + dataSistem);
         nsTeste = 3
             if(produto.data === dataSistem){
-                db = "Ótimo. A data está correta. Vamos gerar a senha! 😉"
+                db = `Ótimo. A data ${dataBios} está correta. Vamos gerar a senha! 😉`
             }
     }
 
