@@ -69,7 +69,11 @@ app.post('/poc', (req, res) => {
         console.log("Vazio")
     }else{
         dataSistem = dataBios.replace(/[/]/g, "");
-        console.log("Populado com: " + dataSistem)
+        console.log("Populado com: " + dataSistem);
+        dataAprovada = 1;
+            if(produto.data === dataSistem){
+                db = `Ótimo. A data` + dataBios ` está correta. Vamos gerar a senha! 😉`
+            }
     }
 
     
@@ -95,6 +99,10 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "nsTeste",
                 "output_result": nsTeste
+            },
+            {
+                "output_variable": "dataAprovada",
+                "output_result": dataAprovada
             }
 
         ]
