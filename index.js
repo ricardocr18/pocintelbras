@@ -18,8 +18,6 @@ app.get('/', (req, res) => {
 
 app.post('/poc', (req, res) => {
 
-    let numero = req.body.ns;
-
     let arr = [
         {
             "ns": "BCKD20000700G",
@@ -37,59 +35,42 @@ app.post('/poc', (req, res) => {
             "modelo": "Modelo NVD",
             "data": "25122020"
         }
-
     ]
 
-
+    let numero = req.body.ns;
+    //Aqui trato as pesquisas referente aos números de séries
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
         db = "Produto está cadastrado em nossa base! 😉"
         equipamento = produto.modelo
         opcao = "Equipamento válido para recuperar senha"
         nsTeste = 1
-        
-
     } else {
         db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔. Segue equipamento referente ao número de série informado."
         equipamento = "Bateria Solar"
         opcao = "Modelo não Tem gerador de senha "
         nsTeste = 2
     }
-
+        
 
     let dataBios = req.body.data     
- 
-   
-
-    //Fazendo teste com a data informada
-    // if (produto.data === dataBios){           
-    //     console.log("correto")
-    // }else{
-    //     console.log("errado")
-    // }
-
-    //Comparando o data digitada com a Data do Banco de dados
+    //Aqui realizo a verificação o match das Datas com os números de séries
     if ( typeof dataBios === 'undefined'){
         console.log("Vazio")
     }else{
         dataSistem = dataBios.replace(/[/]/g, "");
         console.log("Populado com: " + dataSistem);
-        //nsTeste = 3
             if(produto.data === dataSistem){
                 nsTeste = 3
                 db = `Ótimo. A data <span style="color:#00852b;"><b>${dataBios}</b></span> está correta. Vamos gerar a senha! 😉`
             }else{
-                db = `Infelizmente a data informada <span style="color:#00852b;"><b>${dataBios}</b></span> não corresponde com o número de série <span style="color:#00852b;"><b>${produto.ns}</b></span> do equipamento <span style="color:#00852b;"><b>${produto.modelo}</b></span>.`
-                req.body.ns === 'undefined'
-                req.body.data === 'undefined'
-
+                db = `Infelizmente a data informada <span style="color:#00852b;"><b>${dataBios}</b></span> não corresponde com o número de série <span style="color:#00852b;"><b>${produto.ns}</b></span> do equipamento <span style="color:#00852b;"><b>${produto.modelo}</b></span>.`              
+                
             }
     }
-
     
     senha = Math.floor(Math.random() * 65536);
 
-    
     let intelbras = {
         "status": "success",
         "chatbot_response": db,
@@ -121,3 +102,13 @@ app.post('/poc', (req, res) => {
 app.listen(port, () => {
     console.log('API no Heroku está ON')
 })
+
+
+//Fazendo teste com a data informada
+    // if (produto.data === dataBios){           
+    //     console.log("correto")
+    // }else{
+    //     console.log("errado")
+    // }
+
+    //Comparando o data digitada com a Data do Banco de dados
