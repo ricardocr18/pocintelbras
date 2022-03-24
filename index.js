@@ -80,7 +80,7 @@ app.post('/poc', (req, res) => {
                 db = `Ótimo. A data <span style="color:#00852b;"><b>${dataBios}</b></span> está correta. Vamos gerar a senha! 😉`
             }else{
                 db = `Infelizmente a data informada <span style="color:#00852b;"><b>${dataBios}</b></span> não corresponde com o número de série <span style="color:#00852b;"><b>${produto.ns}</b></span> do equipamento <span style="color:#00852b;"><b>${produto.modelo}</b></span>.`
-                dataBios === 'undefined'
+                numero === 'undefined'
             }
     }
 
