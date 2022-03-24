@@ -1,5 +1,6 @@
+//Backp do dia 24/03 funcionando
+
 const express = require('express');
-const { type } = require('os');
 const { serialize } = require('v8');
 const app = express();
 
@@ -39,7 +40,6 @@ app.post('/poc', (req, res) => {
     ]
 
     let numero = req.body.ns;
-    db = 'undefined';
     //Aqui trato as pesquisas referente aos números de séries
     if (arr.some(confirma => confirma.ns === numero)) {
         produto = arr.find(produto => produto.ns === numero)
