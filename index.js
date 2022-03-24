@@ -29,11 +29,13 @@ app.post('/poc', (req, res) => {
         },
         {
             "ns": "BCKD20000700A",
-            "modelo": "Modelo Câmera IP"
+            "modelo": "Modelo Câmera IP",
+            "data": "09092009"
         },
         {
             "ns": "BCKD20000700B",
-            "modelo": "Modelo NVD"
+            "modelo": "Modelo NVD",
+            "data": "25122020"
         }
 
     ]
@@ -70,9 +72,10 @@ app.post('/poc', (req, res) => {
     }else{
         dataSistem = dataBios.replace(/[/]/g, "");
         console.log("Populado com: " + dataSistem);
-        nsTeste = 3
+        //nsTeste = 3
             if(produto.data === dataSistem){
-                db = `Ótimo. A data ${dataBios} está correta. Vamos gerar a senha! 😉`
+                nsTeste = 3
+                db = `Ótimo. A data <b>${dataBios}</b> está correta. Vamos gerar a senha! 😉`
             }
     }
 
