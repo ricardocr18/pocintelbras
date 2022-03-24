@@ -68,11 +68,11 @@ app.post('/poc', (req, res) => {
     if ( typeof dataBios === 'undefined'){
         console.log("Vazio")
     }else{
-        console.log("Populado")
+        dataSistem = dataBios.replace(/[/]/g, "");
+        console.log("Populado com: " + dataSistem)
     }
 
     
-
     senha = Math.floor(Math.random() * 65536);
 
     
