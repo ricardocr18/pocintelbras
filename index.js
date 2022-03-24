@@ -49,7 +49,7 @@ app.post('/poc', (req, res) => {
         nsTeste = 1
 
     } else {
-        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔"
+        db = "Infelizmente, o número de série informado não corresponde a gravador DVR / NVR e câmera IP 😔. Segue equipamento referente ao número de série informado."
         equipamento = "Bateria Solar"
         opcao = "Modelo não Tem gerador de senha "
         nsTeste = 2
@@ -60,13 +60,14 @@ app.post('/poc', (req, res) => {
  
    
 
-    //Informações sobre data
-    if (produto.data === dataBios){           
-        console.log("correto")
-    }else{
-        console.log("errado")
-    }
+    //Fazendo teste com a data informada
+    // if (produto.data === dataBios){           
+    //     console.log("correto")
+    // }else{
+    //     console.log("errado")
+    // }
 
+    //Comparando o data digitada com a Data do Banco de dados
     if ( typeof dataBios === 'undefined'){
         console.log("Vazio")
     }else{
