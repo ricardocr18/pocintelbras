@@ -75,7 +75,7 @@ app.post('/poc', (req, res) => {
         //nsTeste = 3
             if(produto.data === dataSistem){
                 nsTeste = 3
-                db = `Ótimo. A data <b>${dataBios}</b> está correta. Vamos gerar a senha! 😉`
+                db = `Ótimo. A data <span style="color:#00852b;"><b>${dataBios}</b></span> está correta. Vamos gerar a senha! 😉`
             }
     }
 
