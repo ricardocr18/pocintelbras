@@ -99,7 +99,11 @@ app.post('/poc', (req, res) => {
             {
                 "output_variable": "nsTeste",
                 "output_result": nsTeste
-            }       
+            },
+            {
+                "output_variable": "dataAprovada",
+                "output_result": dataAprovada
+            }            
 
         ]
     }
